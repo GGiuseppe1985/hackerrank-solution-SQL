@@ -1,0 +1,5 @@
+SELECT months*salary, count(*)
+from  Employee
+group by months*salary
+order by months*salary DESC
+LIMIT 1
