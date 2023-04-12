@@ -1,0 +1,7 @@
+SELECT Name + '(' + substring(Occupation,1,1) + ')' as output
+FROM OCCUPATIONS
+UNION
+SELECT 'There are a total of ' +
+CONVERT(VARCHAR, count(Occupation)) + ' '+ Lower(Occupation) + 's.' as output
+FROM OCCUPATIONS
+group by Occupation
